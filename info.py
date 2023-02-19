@@ -14,9 +14,9 @@ def is_enabled(value, default):
 # Bot information
 PORT = environ.get("PORT", "8080")
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', 'xxxxxxxxx'))
-API_HASH = environ.get('API_HASH', 'xxxxxxxxxxxxxx')
-BOT_TOKEN = environ.get('BOT_TOKEN', "xxxxxxxxx:xxxxxxxxxxxxxx")
+API_ID = int(environ.get('API_ID', '27639102'))
+API_HASH = environ.get('API_HASH', '35142c1407be6264e68fb6bec5dcabd9')
+BOT_TOKEN = environ.get('BOT_TOKEN', "5625295308:AAFXY-GLROUI0HVY2fHouqwHkKZRrc0xIkE")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -24,9 +24,9 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 PICS = (environ.get('PICS', 'http://telegra.ph/file/950ea0852fcc0c5e3a4db.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1938030055').split()]
-ADMINS = (ADMINS.copy() + [1938030055])
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', 'xxxxxxxxxx').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5606411877').split()]
+ADMINS = (ADMINS.copy() + [5606411877])
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001375419446').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL', '')
@@ -35,15 +35,15 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Multibot123:Multibot123@cluster0.qnuoqak.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "bKajanak")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 PLAN_NAME = environ.get('PLAN_NAME', 'Not Active')
 EXP_DATE = environ.get('EXP_DATE', 'Not Active')
 SUB_DATE = environ.get('SUB_DATE', 'Not Active')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 'xxxxxxxxxxxx'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001834678099'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', '')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
